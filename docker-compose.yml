@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  server:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      - PORT=3000
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql 
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_DATABASE=metacare
+  
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+volumes:
+  mysql:
