@@ -16,6 +16,6 @@ async function bootstrap() {
 
   const PORT = process.env.PORT;
 
-  await app.listen(PORT);
+  app.listen(parseInt(PORT) || 3000);
 }
 bootstrap();
