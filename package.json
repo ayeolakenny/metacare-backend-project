@@ -1,6 +1,9 @@
 {
   "name": "try-prisma",
   "version": "0.0.1",
+  "engines": {
+    "yarn": "1.22.5"
+  },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
   },
@@ -51,6 +54,7 @@
     "@types/supertest": "^2.0.11",
     "@typescript-eslint/eslint-plugin": "^4.28.2",
     "@typescript-eslint/parser": "^4.28.2",
+    "concurrently": "^7.0.0",
     "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
