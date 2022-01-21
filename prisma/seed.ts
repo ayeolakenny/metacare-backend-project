@@ -7,9 +7,8 @@ import { seedCharacter } from '../src/helpers/seedCharacter';
 const prisma = new PrismaClient();
 
 export const seedDb = async () => {
-  const seedStatus = await prisma.seed.findFirst();
-  console.log(seedStatus);
-  if (seedStatus) return;
+  const seedStatus = await prisma.seed.count();
+  if (seedStatus !== 0) return;
 
   const data = await fetchMovies();
 

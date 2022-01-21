@@ -27,7 +27,6 @@ export class CharacterService {
     });
 
     let totalHeightCm: number = 0;
-    const totalHeightFeet: number = 0;
 
     data.forEach((person) => {
       if (!isNaN(parseInt(person.height))) {
