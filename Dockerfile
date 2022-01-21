@@ -11,4 +11,5 @@ RUN if [ "$NODE_ENV" = "development" ]; \
 COPY . ./
 ENV PORT 3000
 EXPOSE $PORT
+VOLUME [ "/app/node_modules" ]
 CMD ["yarn", "start", "dev"]
