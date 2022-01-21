@@ -15,7 +15,14 @@ export const seedCharacter = async (
     height: person.height,
     gender: person.gender,
   };
-  await prisma.character.create({
-    data: characterData,
+  const checkCharacter = await prisma.character.findFirst({
+    where: {
+      name: characterData.name,
+    },
   });
+  if (!checkCharacter) {
+    await prisma.character.create({
+      data: characterData,
+    });
+  }
 };
