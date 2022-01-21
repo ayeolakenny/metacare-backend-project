@@ -44,6 +44,8 @@
 
 * [mysql](https://www.mysql.com/) Database
 
+* [heroku](https://www.heroku.com) Deployment
+
 ## Api Endpoint
 
 * [https://metacare-project.herokuapp.com/api/](https://metacare-project.herokuapp.com/api/)
